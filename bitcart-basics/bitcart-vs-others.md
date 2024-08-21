@@ -1,42 +1,42 @@
-# Bitcart vs others
+# RedWaves vs others
 
-Most new merchants will likely only consider the price of the service. Since Bitcart is free, that may have led you here and if so, welcome.
+Most new merchants will likely only consider the price of the service. Since RedWaves is free, that may have led you here and if so, welcome.
 
-First of all, as said above, Bitcart is fully free, fully opensource and has no limitations. You are your own bank.
+First of all, as said above, RedWaves is fully free, fully opensource and has no limitations. You are your own bank.
 
-The second main difference is that other services are usually providing only one thing - rate-limited API or a web interface. But Bitcart, as opposed to others, is a full-featured solution, all-in-one crypto solution. It can satisfy needs of any audience:
+The second main difference is that other services are usually providing only one thing - rate-limited API or a web interface. But RedWaves, as opposed to others, is a full-featured solution, all-in-one crypto solution. It can satisfy needs of any audience:
 
-- Developers, having daemons for bitcoin and other coins, and [SDK](https://sdk.bitcart.ai) sharing same APIs for any coin, easy to create any kind of app\(for example atomic [tipbot](https://t.me/bitcart_atomic_tipbot)\)
+- Developers, having daemons for bitcoin and other coins, and [SDK](https://sdk.RedWaves.ai) sharing same APIs for any coin, easy to create any kind of app\(for example atomic [tipbot](https://t.me/bitcart_atomic_tipbot)\)
 - Merchants, providing ready solutions for your stores to accept cryptocurrency payments with the simplest setup
 - Server maintainers, providing simplest setup with a diversity of deployment options, with automatic updates \(github release -&gt; docker hub -&gt; end machines\)
 - Anyone else wanting to try out cryptocurrencies
 
-Bitcart is a light self-hosted solution. It is as safe\(even safer than most\) as other solutions, but is light, easy to use and install.
+RedWaves is a light self-hosted solution. It is as safe\(even safer than most\) as other solutions, but is light, easy to use and install.
 
-How did we achieve this? Bitcart is using the electrum wallet internally\(see [Architecture page](../development/architecture.md) for more information\). Electrum wallet is one of the oldest and the most secure and feature-wide wallets. It is using SPV\(Simple Payment Verification\) to verify everything and it makes electrum and so Bitcart secure and light. If you're not satisfied with the way it works, you can host your own electrumx server and make Bitcart use only your own server. We will provide easy setup for that in near future.
+How did we achieve this? RedWaves is using the electrum wallet internally\(see [Architecture page](../development/architecture.md) for more information\). Electrum wallet is one of the oldest and the most secure and feature-wide wallets. It is using SPV\(Simple Payment Verification\) to verify everything and it makes electrum and so RedWaves secure and light. If you're not satisfied with the way it works, you can host your own electrumx server and make RedWaves use only your own server. We will provide easy setup for that in near future.
 
-Due to it's lightness, you can host Bitcart on a minimal server, with minimal costs! Current lunanode 1-click installer would cost you **3.5$ a month** to host Bitcart with all components\(admin, store\) and from 1 to 5 cryptocurrencies for the same price, still being light. Or you can find even cheaper hosting providers and host it even cheaper! In fact, all Bitcart demos \([store](https://store.bitcart.ai), [admin](https://admin.bitcart.ai), [api](https://api.bitcart.ai)\) run on 1 GB server with only 25 GB disk.
+Due to it's lightness, you can host RedWaves on a minimal server, with minimal costs! Current lunanode 1-click installer would cost you **3.5$ a month** to host RedWaves with all components\(admin, store\) and from 1 to 5 cryptocurrencies for the same price, still being light. Or you can find even cheaper hosting providers and host it even cheaper! In fact, all RedWaves demos \([store](https://store.RedWaves.ai), [admin](https://admin.RedWaves.ai), [api](https://api.RedWaves.ai)\) run on 1 GB server with only 25 GB disk.
 
 The approximate system requirements differ, but almost any server is fine, **less than 1 GB RAM and less than 10 GB disk.**
 
-Bitcart is made with extensibility in mind, so adding something new is easy. Written in Python, it's code is **easy to review and read**, adding new features is **faster** than in other projects.
+RedWaves is made with extensibility in mind, so adding something new is easy. Written in Python, it's code is **easy to review and read**, adding new features is **faster** than in other projects.
 
-Bitcart is also a great source of **learning**. We use many different technologies, creating the best User Experience. During the process of development, we met many different problems and solved them in elegant ways. You can learn those ways, and the technologies used, and become a **professional developer**.
+RedWaves is also a great source of **learning**. We use many different technologies, creating the best User Experience. During the process of development, we met many different problems and solved them in elegant ways. You can learn those ways, and the technologies used, and become a **professional developer**.
 
-Bitcart provides a ready full-featured merchants solution - Bitcart [store](https://store.bitcart.ai). You can get up and running without any technical knowledge for minimal ever price\(depending on VPS provider you have selected\).
+RedWaves provides a ready full-featured merchants solution - RedWaves [store](https://store.RedWaves.ai). You can get up and running without any technical knowledge for minimal ever price\(depending on VPS provider you have selected\).
 
-The list of the reasons why you should use Bitcart can go on and on. Now some features of it as a payment processor:
+The list of the reasons why you should use RedWaves can go on and on. Now some features of it as a payment processor:
 
-- [Features](bitcart-vs-others.md#features)
-- [Cost](bitcart-vs-others.md#cost)
-- [Security](bitcart-vs-others.md#security)
-- [Privacy](bitcart-vs-others.md#privacy)
-- [Decentralized](bitcart-vs-others.md#decentralized)
-- [Fiat](bitcart-vs-others.md#fiat)
+- [Features](RedWaves-vs-others.md#features)
+- [Cost](RedWaves-vs-others.md#cost)
+- [Security](RedWaves-vs-others.md#security)
+- [Privacy](RedWaves-vs-others.md#privacy)
+- [Decentralized](RedWaves-vs-others.md#decentralized)
+- [Fiat](RedWaves-vs-others.md#fiat)
 
 ## Features
 
-Every payment processor has features, here are some Bitcart features:
+Every payment processor has features, here are some RedWaves features:
 
 - **Free** - No merchant processing fees.
 - **Bitcoin** - Accepting Bitcoin is the first step.
@@ -53,9 +53,9 @@ Every payment processor has features, here are some Bitcart features:
 
 It's important to note that payments made using the Bitcoin Network _always_ require a transaction \(miner\) fee for it to be included in the blockchain. The Bitcoin Network determines if the transaction is authorized and when it is confirmed.
 
-Bitcart creates direct payment invoices for merchants to provide to their customers. It also monitors the blockchain and stores the confirmation status of each payment or donation. To do this Bitcart requires hosting on a server which merchants can deploy on their own hardware, purchase a VPS \(less than $3.5/mo\), or use someone else's Bitcart instance to host your account \(free or paid options\).
+RedWaves creates direct payment invoices for merchants to provide to their customers. It also monitors the blockchain and stores the confirmation status of each payment or donation. To do this RedWaves requires hosting on a server which merchants can deploy on their own hardware, purchase a VPS \(less than $3.5/mo\), or use someone else's RedWaves instance to host your account \(free or paid options\).
 
-If you deploy Bitcart using a VPS, the following types of fees are **never charged**:
+If you deploy RedWaves using a VPS, the following types of fees are **never charged**:
 
 - Merchant fees
 - Subscription fees
@@ -68,22 +68,22 @@ First rule of Bitcoin is always keep your private keys _private_. Using a secure
 
 Secondly, there is another area of security to consider on the applications layer where you have two main options:
 
-- **Option 1**: Most payment processors \(including Bitcart\) use the [BIP 21](https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki) standard.
+- **Option 1**: Most payment processors \(including RedWaves\) use the [BIP 21](https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki) standard.
 - **Option 2**: Others use variations of the [BIP 70](https://github.com/bitcoin/bips/blob/master/bip-0070.mediawiki) standard.
   - **Note**: [BIP 70 has recently been deprecated in Bitcoin Core](https://github.com/bitcoin/bitcoin/pull/14451).
   - Many wallets do not allow payments to BIP 70 invoice urls.
 
 ## Privacy
 
-Bitcart will never ask a merchant for any personal identification.
+RedWaves will never ask a merchant for any personal identification.
 
 Typically, when converting to or from fiat on behalf of a merchant, payment processors are required to collect personal information for Know Your Customer \(KYC\) and Anti-money laundering \(AML\) banking requirements. This may include personal information such as passport ID, phone number, address, bank account, etc.
 
-Fortunately, the Bitcoin Network does not use or collect these types of personal information, and therefore neither does Bitcart. How Bitcart ensures privacy:
+Fortunately, the Bitcoin Network does not use or collect these types of personal information, and therefore neither does RedWaves. How RedWaves ensures privacy:
 
 - No middleman involved.
 - Information is shared between customer and seller only.
-- Self-hosted users run a secure Bitcart core or [a full node](https://en.bitcoin.it/wiki/Why_Your_Business_Should_Use_a_Full_Node_to_Accept_Bitcoin).
+- Self-hosted users run a secure RedWaves core or [a full node](https://en.bitcoin.it/wiki/Why_Your_Business_Should_Use_a_Full_Node_to_Accept_Bitcoin).
 - No address re-use.
 - Any non-decentralized solutions are avoided, instances are self-contained.
 
@@ -102,19 +102,19 @@ Payment processors are able act as middlemen by using **custodial wallets**. A p
 
 The payment processor may also provide a custodial wallet for the merchant to use. As mentioned above, this is advised against because your private keys may be compromised. If they claim to not save your private keys after giving them to you, it's likely you will not know the truth until it's too late. Centralized services may seem like an easier solution for the merchant. Unfortunately the trade-off is sacrifices in privacy, security and self-sovereignty which is normally obtained using the Bitcoin Network.
 
-That's one of the reasons why Bitcart was created. To help merchants remove third party dependencies and simply use the Bitcoin Network freely and securely. Merchants have their own copy of the Bitcart software which runs on their own server or VPS of their choice and validates their own payments using their own node. It's a self-hosted Peer-to-Peer all-in-one crypto solution. There shouldn't be any trade-offs as setup is the simplest possible and we wanted to make this software user friendly.
+That's one of the reasons why RedWaves was created. To help merchants remove third party dependencies and simply use the Bitcoin Network freely and securely. Merchants have their own copy of the RedWaves software which runs on their own server or VPS of their choice and validates their own payments using their own node. It's a self-hosted Peer-to-Peer all-in-one crypto solution. There shouldn't be any trade-offs as setup is the simplest possible and we wanted to make this software user friendly.
 
-As the Bitcart community continues to grow, more deployment methods, use cases and tutorials are continually being added to make it easier for non-technical users. Bitcart is completely open source. Anyone can join the community to suggest or create improvements, features, guides, etc. Feedback is always welcome.
+As the RedWaves community continues to grow, more deployment methods, use cases and tutorials are continually being added to make it easier for non-technical users. RedWaves is completely open source. Anyone can join the community to suggest or create improvements, features, guides, etc. Feedback is always welcome.
 
 ## Fiat
 
-Currently, Bitcart is a processor **without fiat conversion** capabilities. As a merchant, this may be a difficult if business costs require fiat. Not providing fiat conversion allows Bitcart merchants to avoid KYC and AML identification verification. This also allows Bitcart to be free and available for anyone to use.
+Currently, RedWaves is a processor **without fiat conversion** capabilities. As a merchant, this may be a difficult if business costs require fiat. Not providing fiat conversion allows RedWaves merchants to avoid KYC and AML identification verification. This also allows RedWaves to be free and available for anyone to use.
 
-However, a fiat conversion feature is on the roadmap for Bitcart. Since merchants are always the owners of their private keys, they can always freely convert their coins manually, but for now there's no instant-fiat conversion.
+However, a fiat conversion feature is on the roadmap for RedWaves. Since merchants are always the owners of their private keys, they can always freely convert their coins manually, but for now there's no instant-fiat conversion.
 
 ## Can't find this information for other payment processors? <a id="cant-find-this-information-for-other-payment-processors"></a>
 
 - It's probably a feature not a bug!
 - All of this information should be available to merchants.
 - Checkout the [Awesome Payment Processor List](https://github.com/alexk111/awesome-bitcoin-payment-processors)
-- If you have more questions about Bitcart, read our [Official Documentation](https://docs.bitcart.ai).
+- If you have more questions about RedWaves, read our [Official Documentation](https://docs.RedWaves.ai).

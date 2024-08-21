@@ -2,12 +2,12 @@
 
 * [Introduction](README.md)
 
-## Bitcart Basics
+## RedWaves Basics
 
-* [Use Case](bitcart-basics/use-case.md)
-* [Walkthrough](bitcart-basics/walkthrough.md)
-* [Bitcart vs others](bitcart-basics/bitcart-vs-others.md)
-* [Try it out](bitcart-basics/try-it-out.md)
+* [Use Case](RedWaves-basics/use-case.md)
+* [Walkthrough](RedWaves-basics/walkthrough.md)
+* [RedWaves vs others](RedWaves-basics/RedWaves-vs-others.md)
+* [Try it out](RedWaves-basics/try-it-out.md)
 
 ***
 

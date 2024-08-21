@@ -1,6 +1,6 @@
 # Deployment
 
-Bitcart is extremely easy to deploy on your own server!
+RedWaves is extremely easy to deploy on your own server!
 
 We have the minimal requirements ever possible:
 
@@ -10,6 +10,6 @@ We have the minimal requirements ever possible:
 
 Please refer to this diagram to choose your deployment method (you can see their descriptions in navigation sidebar at left):
 
-![](<../.gitbook/assets/Bitcart Deployment.png>)
+![](<../.gitbook/assets/RedWaves Deployment.png>)
 
-In case you're not yet ready to choose where or how to host (it can cost as little as 3.5$ a month), you can try using Bitcart using [our demo](https://admin.bitcart.ai) or [third-party hosts](thirdpartyhosting.md).
+In case you're not yet ready to choose where or how to host (it can cost as little as 3.5$ a month), you can try using RedWaves using [our demo](https://admin.RedWaves.ai) or [third-party hosts](thirdpartyhosting.md).

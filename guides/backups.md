@@ -1,6 +1,6 @@
 # Backups
 
-Bitcart supports backing up it's data on one server and restoring it on another.
+RedWaves supports backing up it's data on one server and restoring it on another.
 
 It is available via both UI and terminal.
 

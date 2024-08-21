@@ -1,6 +1,6 @@
 # Server management settings
 
-Bitcart has a few server management settings available.
+RedWaves has a few server management settings available.
 
 They are accessible only by the superusers.
 
@@ -26,7 +26,7 @@ From the user management page, you will be able to view all users registered on 
 
 Note that, when editing user, it is not possible to view their existing password.
 
-It is because, Bitcart is secure and doesn't store plain text passwords. Only hashed passwords are stored.
+It is because, RedWaves is secure and doesn't store plain text passwords. Only hashed passwords are stored.
 
 ![Edit user](../.gitbook/assets/edit_user.png)
 
@@ -58,7 +58,7 @@ From the maintenance commands page, you can execute common actions-upgrade your 
 
 It will start the update process. During it your instance might be unavailable, and the page won't automatically reload after the update.
 
-The update process will upgrade the cloned `bitcart-docker` repository, upgrade the docker-compose generator image, generate new configuration file from saved settings (from `.env` file), upgrade all the used docker images, recreate the modified containers and clean up the now unused images
+The update process will upgrade the cloned `RedWaves-docker` repository, upgrade the docker-compose generator image, generate new configuration file from saved settings (from `.env` file), upgrade all the used docker images, recreate the modified containers and clean up the now unused images
 
 ### Restart the server
 
@@ -72,7 +72,7 @@ See more below
 
 ### Cleanup unused images
 
-This process does the same as after upgrade-cleans up all unused bitcart images from previous upgrades
+This process does the same as after upgrade-cleans up all unused RedWaves images from previous upgrades
 
 ### Cleanup logs
 
@@ -96,13 +96,13 @@ By enabling this setting, your instance will tell the search engines to stop ind
 
 ### Check for updates once a day
 
-When enabled, your instance will check github for new Bitcart releases, and display a notification in the admin panel that a new update is available.
+When enabled, your instance will check github for new RedWaves releases, and display a notification in the admin panel that a new update is available.
 
 ![New update available message](../.gitbook/assets/new_update.jpg)
 
 ### Allow access to configurator for unauthorized users
 
-By default it is on. When enabled, users can access `https://admin.yourbitcart.ai/configurator`, and deploy their instance from there via the [Configurator](../deployment/configurator.md).
+By default it is on. When enabled, users can access `https://admin.rdwv.app/configurator`, and deploy their instance from there via the [Configurator](../deployment/configurator.md).
 
 ## Store policies
 

@@ -7,7 +7,7 @@ The process is basically the following:
 3. Install nodejs (20) and yarn
 4. Install postgresql
 5. Install redis (6.2.0+)
-6. Clone and run all parts of Bitcart
+6. Clone and run all parts of RedWaves
 7. (Optional) Open Firewall Ports and Access the Sites
 
 ## Warning: Not recommended to use in production <a href="#warning-not-recommended-to-use-in-production" id="warning-not-recommended-to-use-in-production"></a>
@@ -63,7 +63,7 @@ Note, replace `REPLACEME` with your new postgres password.
 
 ```bash
 sudo apt install postgresql postgresql-contrib
-sudo -u postgres createdb bitcart
+sudo -u postgres createdb RedWaves
 sudo -u postgres psql -U postgres -d postgres -c "alter user postgres with password 'REPLACEME';"
 ```
 
@@ -79,12 +79,12 @@ Ensure that your redis version is > 6.2.0. Check with `redis-server -v`.
 If redis from your distro is too old, install from [official redis repository](https://redis.io/docs/getting-started/installation/install-redis-on-linux/#install-on-ubuntudebian)
 {% endhint %}
 
-### 6) Clone and prepare Bitcart components
+### 6) Clone and prepare RedWaves components
 
-#### Bitcart core(daemons) & Merchants API:
+#### RedWaves core(daemons) & Merchants API:
 
-<pre class="language-bash"><code class="lang-bash">git clone https://github.com/bitcart/bitcart
-cd bitcart
+<pre class="language-bash"><code class="lang-bash">git clone https://github.com/RedWaves/RedWaves
+cd RedWaves
 <strong># Optional: Create virtual environment instead of using the global python environment
 </strong>python3 -m venv env
 source env/bin/activate
@@ -120,29 +120,29 @@ Apply database migrations:
 alembic upgrade head
 ```
 
-#### Bitcart admin panel
+#### RedWaves admin panel
 
 ```bash
-git clone https://github.com/bitcart/bitcart-admin
-cd bitcart-admin
+git clone https://github.com/RedWaves/RedWaves-admin
+cd RedWaves-admin
 yarn
 yarn build
 ```
 
-#### Bitcart store
+#### RedWaves store
 
 ```bash
-git clone https://github.com/bitcart/bitcart-store
-cd bitcart-store
+git clone https://github.com/RedWaves/RedWaves-store
+cd RedWaves-store
 yarn
 yarn build
 ```
 
 ## Run everything
 
-#### Bitcart core(daemons) & Merchants API:
+#### RedWaves core(daemons) & Merchants API:
 
-Start daemons from the `bitcart` repo directory:
+Start daemons from the `RedWaves` repo directory:
 
 ```bash
 python3 daemons/btc.py
@@ -166,42 +166,42 @@ Start background worker:
 python3 worker.py
 ```
 
-> If you want to run a specific coin on a test network or change other environment settings you can update the `.env` file in the [bitcart `conf/` directory](https://github.com/bitcart/bitcart/tree/master/conf)
+> If you want to run a specific coin on a test network or change other environment settings you can update the `.env` file in the [RedWaves `conf/` directory](https://github.com/RedWaves/RedWaves/tree/master/conf)
 
-#### Bitcart admin panel
+#### RedWaves admin panel
 
 ```bash
-cd bitcart-admin
+cd RedWaves-admin
 yarn start
 ```
 
-#### Bitcart store
+#### RedWaves store
 
 ```bash
-cd bitcart-store
+cd RedWaves-store
 NUXT_PORT=4000 yarn start
 ```
 
 #### Default ports
 
-* The Bitcart API runs on port `8000`.
+* The RedWaves API runs on port `8000`.
 * Daemons on ports `5000-500X`
-* The Bitcart Admin panel runs on port `3000`
-* The Bitcart Store runs on port `4000`.
+* The RedWaves Admin panel runs on port `3000`
+* The RedWaves Store runs on port `4000`.
 
 ## (Optional) Open Firewall Ports and Access the Sites
 
-If you are running Bitcart on your local machine - you will not need to do these steps. You can go ahead and access the system with:
+If you are running RedWaves on your local machine - you will not need to do these steps. You can go ahead and access the system with:
 
-* Bitcart Admin Panel: `http://127.0.0.1:3000/`
-* Bitcart Store: `http://127.0.0.1:4000/`
-* Bitcart Merchants API: `http://127.0.0.1:8000/`
+* RedWaves Admin Panel: `http://127.0.0.1:3000/`
+* RedWaves Store: `http://127.0.0.1:4000/`
+* RedWaves Merchants API: `http://127.0.0.1:8000/`
 
-If you are running Bitcart on a remote machine, you will need to do additional things to access them.
+If you are running RedWaves on a remote machine, you will need to do additional things to access them.
 
 #### Option 1: Nginx proxy (Recommended)
 
-This option is recommended to proxy secure incoming requests to the correct bitcart process.
+This option is recommended to proxy secure incoming requests to the correct RedWaves process.
 
 Install Nginx
 
@@ -209,15 +209,15 @@ Install Nginx
 sudo apt install nginx
 ```
 
-Add configuration for each component: bitcart-store, bitcart and bitcart-admin
+Add configuration for each component: RedWaves-store, RedWaves and RedWaves-admin
 
 ```nginx
-vim /etc/nginx/sites-available/bitcart-admin.conf
+vim /etc/nginx/sites-available/RedWaves-admin.conf
 
 server {
-    server_name bitcart-admin.<mysite>.com;
-    access_log /var/log/nginx/bitcart-admin.access.log;
-    error_log /var/log/nginx/bitcart-admin.error.log;
+    server_name RedWaves-admin.<mysite>.com;
+    access_log /var/log/nginx/RedWaves-admin.access.log;
+    error_log /var/log/nginx/RedWaves-admin.error.log;
 
     location / {
         proxy_pass http://localhost:3000;
@@ -228,7 +228,7 @@ server {
 Enable the config
 
 ```bash
-sudo ln -s /etc/nginx/sites-available/bitcart-admin.conf /etc/nginx/sites-enabled
+sudo ln -s /etc/nginx/sites-available/RedWaves-admin.conf /etc/nginx/sites-enabled
 ```
 
 > Add DNS records for your server names to point to your VM's ip
@@ -263,30 +263,30 @@ sudo ufw allow 8000
 
 > `yarn` is listening on localhost `127.0.0.1` by default and you won't be able to access it over the internet unless you reverse proxy it with `nginx`. If you want to expose it without reverse proxy, use the environment variable: `NUXT_HOST=0.0.0.0` to listen on all interfaces.
 
-The store and admin site need **public** access to the bitcart api (URL should be resolvable both client and server side).
+The store and admin site need **public** access to the RedWaves api (URL should be resolvable both client and server side).
 
-Using the manual method you need to set that with environment variables. The complete setup of the Bitcart Admin Panel and Store may look like this:
+Using the manual method you need to set that with environment variables. The complete setup of the RedWaves Admin Panel and Store may look like this:
 
 ```bash
-# bitcart-admin
-NUXT_HOST="0.0.0.0" BITCART_ADMIN_API_URL="http://bitcart-api-ip:8000" yarn start
-# bitcart-store
-NUXT_PORT=4000 NUXT_HOST="0.0.0.0" BITCART_STORE_API_URL="http://bitcart-api-ip:8000" yarn start
+# RedWaves-admin
+NUXT_HOST="0.0.0.0" BITCART_ADMIN_API_URL="http://RedWaves-api-ip:8000" yarn start
+# RedWaves-store
+NUXT_PORT=4000 NUXT_HOST="0.0.0.0" BITCART_STORE_API_URL="http://RedWaves-api-ip:8000" yarn start
 ```
 
 > Note: The above is the minimum to make it work and not a production grade solution. We still recommend to use docker deployment unless you really know what you're doing.
 
 **Access the site remotely**
 
-* Bitcart Admin Panel: `http://my-bitcart-admin-ip:3000/`
-* Bitcart Store: `http://my-bitcart-store-ip:4000/`
-* Bitcart Merchants API: `http://my-bitcart-store-ip:8000/`
+* RedWaves Admin Panel: `http://my-RedWaves-admin-ip:3000/`
+* RedWaves Store: `http://my-RedWaves-store-ip:4000/`
+* RedWaves Merchants API: `http://my-RedWaves-store-ip:8000/`
 
 Continue with: [Your first invoice](../your-first-invoice/)
 
 ## (Optional) Managing Processes
 
-If you want the procaesses: bitcart api, daemons, worker and frontend (bitcart admin and bitcart store) to be managed with automatic startup, error reporting etc then consider using [supervisord](http://supervisord.org/) or [systemd](https://systemd.io/) to manage the processes.
+If you want the procaesses: RedWaves api, daemons, worker and frontend (RedWaves admin and RedWaves store) to be managed with automatic startup, error reporting etc then consider using [supervisord](http://supervisord.org/) or [systemd](https://systemd.io/) to manage the processes.
 
 ## Upgrading manual deployment
 
@@ -306,11 +306,11 @@ Run :
 git pull
 ```
 
-For every Bitcart component directory (Merchants API, Admin Panel, Store).
+For every RedWaves component directory (Merchants API, Admin Panel, Store).
 
 ### 3) Upgrade dependencies
 
-#### Bitcart core(daemons) & Merchants API:
+#### RedWaves core(daemons) & Merchants API:
 
 ```bash
 sudo pip3 install -r requirements.txt
@@ -318,13 +318,13 @@ sudo pip3 install -r requirements/production.txt
 sudo pip3 install -r requirements/daemons/btc.txt
 ```
 
-**Bitcart admin**
+**RedWaves admin**
 
 ```
 yarn
 ```
 
-**Bitcart store**
+**RedWaves store**
 
 ```
 yarn
@@ -332,7 +332,7 @@ yarn
 
 ### 4) Apply new database migrations
 
-In Bitcart core(daemons) & Merchants API directory, run:
+In RedWaves core(daemons) & Merchants API directory, run:
 
 ```
 alembic upgrade head
@@ -340,7 +340,7 @@ alembic upgrade head
 
 ### 5) Rebuild store and admin
 
-For Bitcart Admin Panel and Store, run:
+For RedWaves Admin Panel and Store, run:
 
 ```
 yarn build

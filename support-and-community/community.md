@@ -4,8 +4,8 @@ This project is nothing without its community!
 
 Join us:
 
-[Telegram](https://t.me/bitcart)
+[Telegram](https://t.me/RedWaves)
 
-[Github](https://github.com/bitcart/bitcart)
+[Github](https://github.com/RedWaves/RedWaves)
 
-[More communities](https://bitcart.ai/#community)
+[More communities](https://RedWaves.ai/#community)

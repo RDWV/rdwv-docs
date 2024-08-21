@@ -8,11 +8,11 @@ It is enabled in the `frontend` or `all` installation groups (see `BITCART_INSTA
 
 The store POS displays the information for the store configured by server admin. It can display one store at once. It is controlled from [server management settings](server-management-settings.md#id-of-the-store-to-enable-on-pos)
 
-The price slider will automatically adjust to the maximum price of the products in the store. The currency for all products in the store is determined by the [default currency](../bitcart-basics/walkthrough.md#stores) of selected store
+The price slider will automatically adjust to the maximum price of the products in the store. The currency for all products in the store is determined by the [default currency](../RedWaves-basics/walkthrough.md#stores) of selected store
 
 Categories are built from all of the selected product's categories, plus the `all` category to show all products
 
-The Only Sale setting shows only products that have an active [discount](../bitcart-basics/walkthrough.md#discounts) connected to them.
+The Only Sale setting shows only products that have an active [discount](../RedWaves-basics/walkthrough.md#discounts) connected to them.
 
 The Contact Us text shows the store's email. It is configured in the email settings of the store
 

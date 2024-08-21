@@ -1,24 +1,24 @@
 # Templates
 
-Templates in Bitcart are powered by the Jinja2 templating engine. It means that you have the full flexibility of the templating engine.
+Templates in RedWaves are powered by the Jinja2 templating engine. It means that you have the full flexibility of the templating engine.
 
-There are currently 3 different templates you able to customize in Bitcart: `notification`, `product` and `shop`. Plus you are able to create custom-named templates for use with our future scripting language.
+There are currently 3 different templates you able to customize in RedWaves: `notification`, `product` and `shop`. Plus you are able to create custom-named templates for use with our future scripting language.
 
 Check the example templates [here](../examples/templates.md)
 
 For each of the objects, you are able to select a custom template.
 
-The templates for an object are selected as per [template selection rules](../bitcart-basics/walkthrough.md#template-selection-rules)
+The templates for an object are selected as per [template selection rules](../RedWaves-basics/walkthrough.md#template-selection-rules)
 
 ![Store default templates](../.gitbook/assets/store\_default\_templates.png)
 
 ## HTML templates
 
-In some places of Bitcart, it is possible to render templates as html files instead of plain text.
+In some places of RedWaves, it is possible to render templates as html files instead of plain text.
 
 For example, in emails sent to customer on successful checkout, you could use default templates (or customized a bit) which are plain text, or instead, you could enable html template rendering and send your customers a beautiful email.
 
-Currently html template rendering is available only in [store emails sent to customer](../bitcart-basics/walkthrough.md#store-checkout-settings)
+Currently html template rendering is available only in [store emails sent to customer](../RedWaves-basics/walkthrough.md#store-checkout-settings)
 
 **Note**: if you enable html template rendering, default templates or any plain text templates will now render incorrectly, without new lines. So ensure to check that template rendering templates match the templates themselves.
 
@@ -34,7 +34,7 @@ You can check html templates examples [here](../examples/templates.md).
 
 ### Notification
 
-Notification template is used when building the message to be sent via all configured [notification providers](../bitcart-basics/walkthrough.md#notification-providers) to the merchant notifying of successful order (to start shipping, for example).
+Notification template is used when building the message to be sent via all configured [notification providers](../RedWaves-basics/walkthrough.md#notification-providers) to the merchant notifying of successful order (to start shipping, for example).
 
 The are two variables passed:
 
@@ -49,7 +49,7 @@ The default template is the following:
 New order from {{ invoice.buyer_email }} for {{ invoice | format_decimal("price") }} {{ invoice.currency }}!
 ```
 
-&#x20;An up-to-date version can always be found at this [link](https://github.com/bitcart/bitcart/blob/master/api/templates/notification.j2)
+&#x20;An up-to-date version can always be found at this [link](https://github.com/RedWaves/RedWaves/blob/master/api/templates/notification.j2)
 
 ### Shop
 
@@ -77,7 +77,7 @@ If you've got any questions, email us at {{store.email}}.
 Best wishes, your {{store.name}}.
 ```
 
-An up-to-date version can always be found at this [link](https://github.com/bitcart/bitcart/blob/master/api/templates/shop.j2)
+An up-to-date version can always be found at this [link](https://github.com/RedWaves/RedWaves/blob/master/api/templates/shop.j2)
 
 ### Product
 
@@ -104,4 +104,4 @@ It'll ship shortly!
 {% endraw %}
 ```
 
-An up-to-date version can always be found at this [link](https://github.com/bitcart/bitcart/blob/master/api/templates/product.j2)
+An up-to-date version can always be found at this [link](https://github.com/RedWaves/RedWaves/blob/master/api/templates/product.j2)

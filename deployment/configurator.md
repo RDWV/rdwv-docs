@@ -1,8 +1,8 @@
 # Configurator
 
-Bitcart Configurator allows you to easily deploy new Bitcart instances, or re-configuring existing ones, with ease and no technical skills.
+RedWaves Configurator allows you to easily deploy new RedWaves instances, or re-configuring existing ones, with ease and no technical skills.
 
-Configurator demo is accessible at https://configurator.bitcart.ai
+Configurator demo is accessible at https://configurator.RedWaves.ai
 
 You can access it from your admin by clicking the configurator button.
 
@@ -40,7 +40,7 @@ If you don't trust the configurator's server, or you just need a copiable script
 
 ### Current instance
 
-If you are the server admin, you will have access to the current instance mode. You can change settings of your current instance without logging in to your server. By clicking current instance button Bitcart loads all current settings which you can customize.
+If you are the server admin, you will have access to the current instance mode. You can change settings of your current instance without logging in to your server. By clicking current instance button RedWaves loads all current settings which you can customize.
 
 ## Domains
 
@@ -68,7 +68,7 @@ On the additional page, you may enable additional plugin packs, for example, Tor
 
 On this page you can configure advanced parameters. If you don't need to edit them, skip to the next page.
 
-You can choose an installation pack (all, backend, frontend or none), and add more custom components, or edit the bitcart-docker repository URL.
+You can choose an installation pack (all, backend, frontend or none), and add more custom components, or edit the RedWaves-docker repository URL.
 
 ![Advanced page](../.gitbook/assets/configurator_advanced.png)
 

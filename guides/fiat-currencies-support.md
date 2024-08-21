@@ -1,6 +1,6 @@
 # Fiat currencies support
 
-Bitcart supports automatic conversion from fiat currencies to payment method's currency upon invoice creation.
+RedWaves supports automatic conversion from fiat currencies to payment method's currency upon invoice creation.
 
 It is done via cached pre-fetched exchange rates, got from configured provider.
 
@@ -8,9 +8,9 @@ The default fiat currency used for prices is USD.
 
 The default exchange rate provider is CoinGecko, as it provides a big list of fiat currencies to select from, as well as the historical rates, plus it is free of charge and has generous limits.
 
-Bitcart's default exchange rate is the same as Electrum's one.
+RedWaves's default exchange rate is the same as Electrum's one.
 
-All the exchange rate providers available in Electrum are also available in Bitcart.
+All the exchange rate providers available in Electrum are also available in RedWaves.
 
 ## Fiat currencies in the admin panel
 

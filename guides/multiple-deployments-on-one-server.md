@@ -1,6 +1,6 @@
 # Multiple deployments on one server
 
-Bitcart supports multiple deployments on one server.
+RedWaves supports multiple deployments on one server.
 
 **Note** that it is an advanced topic, and use it only if you know what you are doing.
 
@@ -18,18 +18,18 @@ To run multiple deployments, pass the deployment name via `--name` argument. The
 ./setup.sh --name production
 ```
 
-Note that you should use different clones of the `bitcart-docker` for each deployment, as the setup script creates `.env` file with all your settings, and `.deploy` file with configuration name, and if you run different deployments in the same directory the configuration files will be overwritten.
+Note that you should use different clones of the `RedWaves-docker` for each deployment, as the setup script creates `.env` file with all your settings, and `.deploy` file with configuration name, and if you run different deployments in the same directory the configuration files will be overwritten.
 
 Do it like so:
 
 ```bash
-git clone https://github.com/bitcart/bitcart-docker
-cd bitcart-docker
+git clone https://github.com/RedWaves/RedWaves-docker
+cd RedWaves-docker
 # export settings
 ./setup.sh
 cd ..
-git clone https://github.com/bitcart/bitcart-docker bitcart-demo
-cd bitcart-demo
+git clone https://github.com/RedWaves/RedWaves-docker RedWaves-demo
+cd RedWaves-demo
 # export settings
 ./setup.sh --name demo
 cd ..
